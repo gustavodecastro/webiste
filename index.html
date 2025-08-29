@@ -5,46 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustavo Amorim - Personal website</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-He6A6MfoGHAOB3HHLyQxCd3NrkjdMl5KaGyrcg5gKPZXUmpCkBlYdKx1V9Rq/aXP6A1i7NWmf/KwxQBS2V9SGFA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Inline CSS for demonstration; ideally you'd keep this in styles.css */
-        html, body {
-            height: 100%; /* Ensure full height for the body */
-            margin: 0; /* Remove default margin */
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Stack elements vertically */
-        }
-
         body {
-            font-family: Calibri, sans-serif; /* Change font to Calibri */
-            background-color: #F7F7F7; /* Set body background color to light grey */
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8; /* Optional: Set a light background color for the body */
         }
 
         header {
-            display: flex; /* Use flexbox for layout */
-            justify-content: space-between; /* Space out the name and tabs */
-            align-items: center; /* Center vertically */
-            background-color: #000035; /* Dark navy for the header */
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #FFC72C; /* Vanderbilt Golden Yellow */
             padding: 20px; /* Add some padding for visual appeal */
             color: white; /* Text color for the header */
-            width: 70%; /* Set width to 70% */
-            margin: 0 auto; /* Center the header */
-            font-weight: bold; /* Make the header text bold */
-        }
-
-        .header-title {
-            margin: 0; /* Remove default margin */
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
-            margin: 0; /* Remove default margin */
         }
 
         nav ul li {
             display: inline;
-            margin-left: 10px; /* Space between tabs */
+            margin-right: 10px;
         }
 
         button.tab {
@@ -58,64 +41,29 @@
         }
 
         button.tab:hover {
-            color: #ccc; /* Change color on hover for better interaction */
+            color: #ccc; /* Optional: Change color on hover for better interaction */
         }
 
         button.tab.active {
             text-decoration: underline; /* Underline active tab for clarity */
         }
 
-        #content {
-            flex: 1; /* Allow content to fill available space */
-            display: flex; /* Display content area as a flexbox */
-            flex-direction: column; /* Stack sections vertically */
-            align-items: center; /* Center content horizontally */
-            width: 70%; /* Set content width to 70% */
-            margin: 0 auto; /* Center content */
-        }
-
         .tab-content {
             display: none; /* Hide all content by default */
-            flex: 1; /* Allow tab content to grow and fill available space */
-            padding: 20px; /* Padding inside the content area */
-            background-color: white; /* Background for the content area */
-            border-radius: 8px; /* Optional: rounded corners for content */
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: subtle shadow effect */
         }
 
         .tab-content.active {
             display: block; /* Show active content */
         }
-
-        footer {
-            display: flex; /* Use flexbox for layout */
-            justify-content: space-between; /* Space out affiliation and icons */
-            align-items: center; /* Center vertically */
-            background-color: #000035; /* Dark navy for the footer */
-            padding: 10px 20px; /* Add padding for visual appeal */
-            color: white; /* Text color for the footer */
-            width: 70%; /* Set width to 70% */
-            margin: 0 auto; /* Center the footer */
-            font-weight: bold; /* Make the footer text bold */
-        }
-
-        .contact-info a {
-            margin-left: 10px; /* Space between icons */
-            color: white; /* Text color for links */
-            text-decoration: none; /* Remove underline from links */
-        }
-
-        .contact-info a:hover {
-            color: #ccc; /* Change color on hover for better interaction */
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1 class="header-title">Gustavo Amorim</h1>
+        <h1>Gustavo Amorim</h1>
+        <p>Assistant Professor at Vanderbilt University Medical Center</p>
         <nav>
             <ul>
-                <li><button class="tab" onclick="showTab('about')">Home</button></li>
+                <li><button class="tab" onclick="showTab('about')">About</button></li>
                 <li><button class="tab" onclick="showTab('publications')">Publications</button></li>
                 <li><button class="tab" onclick="showTab('courses')">Courses</button></li>
                 <li><button class="tab" onclick="showTab('contact')">Contact</button></li>
@@ -128,16 +76,6 @@
         <section id="about" class="tab-content active">
             <h2>About Me</h2>
             <p>I work on statistical missing data, two-phase designs, and semiparametric regression. I also work on Global Health, focusing on Tuberculosis and HIV.</p>
-            
-            <h3>Education</h3>
-            <ul>
-                <li>BSc in Physics, Federal University of Minas Gerais (2004)</li>
-                <li>MSc in Statistics, Federal University of Minas Gerais (2010)</li>
-                <li>PhD in Statistics, The University of Auckland (2015)</li>
-            </ul>
-
-            <h3>Previous Experience</h3>
-            <p>Postgraduate Researcher at Ghent University (2015-2017)</p>
         </section>
 
         <section id="publications" class="tab-content">
@@ -169,13 +107,7 @@
     </div>
 
     <footer>
-        <div>Assistant Professor at Vanderbilt University Medical Center</div>
-        <div class="contact-info">
-            <a href="mailto:gustavo.g.amorim@vumc.org"><span>✉️</span></a>
-            <a href="https://github.com/your_github_link" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
+        <p>© <span id="year"></span> Gustavo Amorim. All rights reserved.</p>
     </footer>
 
     <script>
