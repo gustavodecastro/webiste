@@ -17,7 +17,7 @@
 
         body {
             font-family: Calibri, sans-serif; /* Change font to Calibri */
-            /* background-color: #e0e0e0; /* Set body background color to light grey */
+            background-color: #e0e0e0; /* Set body background color to light grey */
         }
 
         header {
@@ -31,7 +31,6 @@
             font-weight: bold; /* Make the header text bold */
             color: white; /* Text color for the header */
             border-radius: 8px; /* Optional: rounded corners for the header */
-            margin-bottom: 0; /* Ensure no space below the header */
         }
 
         .header-title {
@@ -89,27 +88,27 @@
             display: block; /* Show active content */
         }
        
-        footer {
-            display: flex; /* Use flexbox for layout */
-            justify-content: space-between; /* Space out affiliation and icons */
-            align-items: center; /* Center vertically */
-            background-color: #01101e; /* Darker grey for the footer */
-            padding: 10px 20px; /* Add padding for visual appeal */
-            color: white; /* Text color for the footer */
-            width: 70%; /* Set width to 60% */
-            margin: 20px auto 0; /* Center the footer, with a top margin */
-            font-weight: bold; /* Make the footer text bold */
-        }
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 20px auto 0; /* centers footer, aligns with header/content */
+    background-color: #01101e;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+  }
 
-        .contact-info a {
-            /* margin-left: 10px; /* Space between icons */
-            color: black; /* Text color for links */
-            text-decoration: none; /* Remove underline from links */
-        }
+  .contact-info a {
+    /* margin-left: 10px; Space between icons */
+    color: white;
+    text-decoration: none;
+  }
+  .contact-info a + a { margin-left: 10px; } /* proper spacing between icons */
+  .contact-info a:hover { color: #ccc; }
 
-        .contact-info a:hover {
-            color: #ccc; /* Change color on hover for better interaction */
-        }
     </style>
 </head>
 <body>
