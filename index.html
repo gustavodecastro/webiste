@@ -58,20 +58,29 @@
     flex: 1;                     /* fill space between header and footer */
     display: flex;
     flex-direction: column;
-    padding-top: 0;
-    margin: 0;                   /* no auto margins */
   }
 
-  .tab-content {
-    display: none;
-    flex: 1;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  .tab-content.active { display: block; }
+.tab-content {
+  display: none;      /* hidden by default */
+  flex: 1;            /* take all available height */
+  width: 100%;
+  margin: 0;
+  padding: 0;         /* important: no padding so iframe can truly fill */
+  background: white;  /* keep or adjust to taste */
+  border-radius: 0;   /* optional: flat edges where it meets header/footer */
+  box-shadow: none;   /* optional */
+}
+ .tab-content.active { display: flex; flex-direction: column; }
 
+    .cv-frame {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      min-height: 0; /* prevents overflow in some browsers */
+    }
+    
   footer {
     display: flex;
     justify-content: space-between;
@@ -141,14 +150,13 @@
         </section>
 
         <section id="CV" class="tab-content">
-          <h2>CV</h2>
-          <!-- Fallback link (in case the PDF viewer isn’t supported) -->
-          <p>If the CV doesn’t load, <a href="gustavo_cv_082025.pdf" target="_blank" rel="noopener">click here to open it</a>.</p>
           <iframe
-            src="gustavo_cv_082025.pdf"
-            title="Gustavo Amorim"
+            src="CV.pdf"
+            title="Gustavo Amorim CV"
             class="cv-frame"
           ></iframe>
+          <!-- Optional fallback link (only shows if you add it elsewhere) -->
+          <!-- <a href="CV.pdf" target="_blank" rel="noopener">Open CV</a> -->
         </section>
     </div>
     
