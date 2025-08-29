@@ -1,10 +1,3 @@
-To set the header and footer to 70% width and have them share the same background color, you can apply similar styling to the header and footer as was done with the content. Here’s how you can adjust your HTML and CSS to achieve this:
-
-### Updated HTML with Header and Footer Styling
-
-Here's the revised HTML with the required changes:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,11 +24,12 @@ Here's the revised HTML with the required changes:
             display: flex; /* Use flexbox for layout */
             justify-content: space-between; /* Space out the name and tabs */
             align-items: center; /* Center vertically */
-            background-color: #b0b0b0; /* Darker grey for the header */
+            background-color: #000035; /* Dark navy for the header */
             padding: 20px; /* Add some padding for visual appeal */
-            color: black; /* Text color for the header */
+            color: white; /* Text color for the header */
             width: 70%; /* Set width to 70% */
             margin: 0 auto; /* Center the header */
+            font-weight: bold; /* Make the header text bold */
         }
 
         .header-title {
@@ -55,7 +49,7 @@ Here's the revised HTML with the required changes:
 
         button.tab {
             background: none; /* Make background transparent */
-            color: black; /* Set text color to black */
+            color: white; /* Set text color to white */
             border: none; /* Remove border */
             padding: 10px 15px;
             cursor: pointer;
@@ -64,7 +58,7 @@ Here's the revised HTML with the required changes:
         }
 
         button.tab:hover {
-            color: #555; /* Change color on hover for better interaction */
+            color: #ccc; /* Change color on hover for better interaction */
         }
 
         button.tab.active {
@@ -97,21 +91,22 @@ Here's the revised HTML with the required changes:
             display: flex; /* Use flexbox for layout */
             justify-content: space-between; /* Space out affiliation and icons */
             align-items: center; /* Center vertically */
-            background-color: #b0b0b0; /* Darker grey for the footer */
+            background-color: #000035; /* Dark navy for the footer */
             padding: 10px 20px; /* Add padding for visual appeal */
-            color: black; /* Text color for the footer */
+            color: white; /* Text color for the footer */
             width: 70%; /* Set width to 70% */
             margin: 0 auto; /* Center the footer */
+            font-weight: bold; /* Make the footer text bold */
         }
 
         .contact-info a {
             margin-left: 10px; /* Space between icons */
-            color: black; /* Text color for links */
+            color: white; /* Text color for links */
             text-decoration: none; /* Remove underline from links */
         }
 
         .contact-info a:hover {
-            color: #555; /* Change color on hover for better interaction */
+            color: #ccc; /* Change color on hover for better interaction */
         }
     </style>
 </head>
@@ -120,7 +115,7 @@ Here's the revised HTML with the required changes:
         <h1 class="header-title">Gustavo Amorim</h1>
         <nav>
             <ul>
-                <li><button class="tab" onclick="showTab('about')">About</button></li>
+                <li><button class="tab" onclick="showTab('about')">Home</button></li>
                 <li><button class="tab" onclick="showTab('publications')">Publications</button></li>
                 <li><button class="tab" onclick="showTab('courses')">Courses</button></li>
                 <li><button class="tab" onclick="showTab('contact')">Contact</button></li>
@@ -210,12 +205,3 @@ Here's the revised HTML with the required changes:
     </script>
 </body>
 </html>
-```
-
-### Key Changes Made:
-
-1. **Header and Footer Width**: The `header` and `footer` elements are now set to `width: 70%;` and `margin: 0 auto;` to center them on the page.
-
-2. **Shared Background Color**: The background color of the `header` and `footer` is kept at `#b0b0b0`, ensuring consistency.
-
-3. **Main Content Area**: The main content area (`#content`) retains the width of `70%` to match the header and
