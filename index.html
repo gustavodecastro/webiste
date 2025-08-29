@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Academic Website</title>
+    <title>Gustavo Amorim - Personal website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>Your Position (e.g., Researcher, Professor)</p>
+        <h1>Gustavo Amorim</h1>
+        <p>Assistant Professor</p>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#publications">Publications</a></li>
+                <li><a href="#courses">Courses</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -21,7 +22,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Brief introduction about yourself, your research interests, and academic background.</p>
+        <p>I work on statistical missing data, two-phase designs, semiparametric regression. I also work on Global Health, focusing on Tuberculosis and HIV.</p>
     </section>
 
     <section id="publications">
@@ -34,14 +35,28 @@
         </ul>
     </section>
 
+    <section id="courses">
+        <h2>Courses</h2>
+        <ul>
+            <li><a href="link_to_publication_1">BIOS 6311</a> - Description</li>
+        </ul>
+    </section>
+    
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
-        <p>LinkedIn: <a href="your_linkedin_profile_url">Your LinkedIn Profile</a></p>
+        <p>Email: <a href="mailto:gustavo.g.amorim at vumc.org">gustavo.g.amorim at vumc.org</a></p>
     </section>
 
     <footer>
-        <p>© [Year] Your Name. All rights reserved.</p>
+        <p>© [Year] Gustavo Amorim. All rights reserved.</p>
     </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const yearSpan = document.createElement("span");
+        yearSpan.textContent = new Date().getFullYear();
+        document.querySelector("footer p").innerHTML = `© ${yearSpan.textContent} Your Name. All rights reserved.`;
+    });
+    </script>
 </body>
 </html>
