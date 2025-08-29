@@ -9,22 +9,31 @@
         /* Inline CSS for demonstration; ideally you'd keep this in styles.css */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8; /* Optional: Set a background color */
+            background-color: #f8f8f8; /* Optional: Set a light background color for the body */
         }
-        
+
         header {
-            text-align: center;
-            margin-bottom: 20px;
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space out the name and tabs */
+            align-items: center; /* Center vertically */
+            background-color: #FFC72C; /* Vanderbilt Golden Yellow */
+            padding: 20px; /* Add some padding for visual appeal */
+            color: white; /* Text color for the header */
+        }
+
+        .header-title {
+            margin: 0; /* Remove default margin */
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0; /* Remove default margin */
         }
 
         nav ul li {
             display: inline;
-            margin-right: 10px;
+            margin-left: 10px; /* Space between tabs */
         }
 
         button.tab {
@@ -56,9 +65,8 @@
 </head>
 <body>
     <header>
-        <h1>Gustavo Amorim</h1>
-        <p>Assistant Professor</p>
-        <p>Vanderbilt University Medical Center</p>
+        <h1 class="header-title">Gustavo Amorim</h1>
+        <p>Assistant Professor at Vanderbilt University Medical Center</p>
         <nav>
             <ul>
                 <li><button class="tab" onclick="showTab('about')">About</button></li>
@@ -74,7 +82,8 @@
         <section id="about" class="tab-content active">
             <h2>About Me</h2>
             <p>I work on statistical missing data, two-phase designs, and semiparametric regression. I also work on Global Health, focusing on Tuberculosis and HIV.</p>
-           <h3>Education</h3>
+            
+            <h3>Education</h3>
             <ul>
                 <li>BSc in Physics, Federal University of Minas Gerais (2004)</li>
                 <li>MSc in Statistics, Federal University of Minas Gerais (2010)</li>
