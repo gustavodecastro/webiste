@@ -27,15 +27,16 @@
         }
 
         button.tab {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
+            background-color: transparent; /* Remove background color */
+            color: black; /* Text color */
+            border: 2px solid transparent; /* Optional border */
             padding: 10px 15px;
             cursor: pointer;
+            font-weight: bold; /* Make the text bold */
         }
 
         button.tab.active {
-            background-color: #45a049;
+            border: 2px solid black; /* Optional border for active tab */
         }
 
         .tab-content {
@@ -50,7 +51,7 @@
 <body>
     <header>
         <h1>Gustavo Amorim</h1>
-        <p>Assistant Professor</p>
+        <p>Assistant Professor at Vanderbilt University Medical Center</p>
         <nav>
             <ul>
                 <li><button class="tab" onclick="showTab('about')">About</button></li>
