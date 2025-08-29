@@ -65,11 +65,17 @@
             display: block; /* Show active content */
         }
 
-        .contact-info {
-            position: absolute; /* Position relative to the body */
-            bottom: 20px; /* Distance from the bottom */
-            right: 20px; /* Distance from the right */
-            font-size: 14px; /* Font size */
+        footer {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space out affiliation and icons */
+            align-items: center; /* Center vertically */
+            background-color: #FFC72C; /* Vanderbilt Golden Yellow */
+            padding: 10px 20px; /* Add padding for visual appeal */
+            color: black; /* Text color for the footer */
+            position: fixed; /* Fix the footer to the bottom */
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
 
         .contact-info a {
@@ -79,7 +85,7 @@
         }
 
         .contact-info a:hover {
-            color: #FFC72C; /* Change color to match header on hover */
+            color: #ccc; /* Change color on hover for better interaction */
         }
     </style>
 </head>
@@ -142,17 +148,14 @@
         </section>
     </div>
 
-    <div class="contact-info">
-        <p>
-            <span>✉️</span>
-            <a href="mailto:gustavo.g.amorim@vumc.org">Contact Me</a>
-            <i class="fab fa-github"></i>
-            <a href="https://github.com/gustavodecastro" target="_blank">GitHub</a>
-        </p>
-    </div>
-
     <footer>
-        <p>© <span id="year"></span> Gustavo Amorim. All rights reserved.</p>
+        <div>Assistant Professor at Vanderbilt University Medical Center</div>
+        <div class="contact-info">
+            <a href="mailto:gustavo.g.amorim@vumc.org"><span>✉️</span></a>
+            <a href="https://github.com/your_github_link" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </footer>
 
     <script>
