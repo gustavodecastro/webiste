@@ -9,15 +9,12 @@
         /* Inline CSS for demonstration; ideally you'd keep this in styles.css */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8; /* Optional: Set a light background color for the body */
+            background-color: #f8f8f8; /* Optional: Set a background color */
         }
-
+        
         header {
             text-align: center;
             margin-bottom: 20px;
-            background-color: #FFC72C; /* Vanderbilt Golden Yellow */
-            padding: 20px; /* Add some padding for visual appeal */
-            color: white; /* Text color for the header */
         }
 
         nav ul {
@@ -60,7 +57,8 @@
 <body>
     <header>
         <h1>Gustavo Amorim</h1>
-        <p>Assistant Professor at Vanderbilt University Medical Center</p>
+        <p>Assistant Professor</p>
+        <p>Vanderbilt University Medical Center</p>
         <nav>
             <ul>
                 <li><button class="tab" onclick="showTab('about')">About</button></li>
@@ -76,6 +74,15 @@
         <section id="about" class="tab-content active">
             <h2>About Me</h2>
             <p>I work on statistical missing data, two-phase designs, and semiparametric regression. I also work on Global Health, focusing on Tuberculosis and HIV.</p>
+           <h3>Education</h3>
+            <ul>
+                <li>BSc in Physics, Federal University of Minas Gerais (2004)</li>
+                <li>MSc in Statistics, Federal University of Minas Gerais (2010)</li>
+                <li>PhD in Statistics, The University of Auckland (2015)</li>
+            </ul>
+
+            <h3>Previous Experience</h3>
+            <p>Postgraduate Researcher at Ghent University (2015-2017)</p>
         </section>
 
         <section id="publications" class="tab-content">
