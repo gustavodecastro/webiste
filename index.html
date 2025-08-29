@@ -10,7 +10,6 @@
         /* Inline CSS for demonstration; ideally you'd keep this in styles.css */
         html, body {
             height: 100%; /* Ensure full height for the body */
-            width: 70%;
             margin: 0; /* Remove default margin */
             display: flex; /* Use flexbox for layout */
             flex-direction: column; /* Stack elements vertically */
@@ -18,13 +17,15 @@
 
         body {
             font-family: Calibri, sans-serif; /* Change font to Calibri */
-            background-color: #e0e0e0; /* Set body background color to light grey */
+            /* background-color: #e0e0e0; /* Set body background color to light grey */
         }
 
         header {
             display: flex; /* Use flexbox for layout */
             justify-content: space-between; /* Space out the name and tabs */
             align-items: center; /* Center vertically */
+            width: 70%;
+            margin: 0 auto;
             background-color: #01101e; /* Darker grey for the header */
             padding: 20px; /* Add some padding for visual appeal */
             color: white; /* Text color for the header */
@@ -67,6 +68,8 @@
             flex: 1; /* Allow content to fill available space */
             display: flex; /* Display content area as a flexbox */
             flex-direction: column; /* Stack sections vertically */
+            width: 60%; /* Set content width to 60% */
+            margin: 0 auto; /* Center content */
         }
 
         .tab-content {
@@ -75,7 +78,7 @@
             padding: 20px; /* Padding inside the content area */
             background-color: white; /* Background for the content area */
             border-radius: 8px; /* Optional: rounded corners for content */
-            /* box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: subtle shadow effect */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: subtle shadow effect */
         }
 
         .tab-content.active {
@@ -89,6 +92,9 @@
             background-color: #01101e; /* Darker grey for the footer */
             padding: 10px 20px; /* Add padding for visual appeal */
             color: white; /* Text color for the footer */
+            width: 60%; /* Set width to 60% */
+            margin: 20px auto 0; /* Center the footer */
+            font-weight: bold; /* Make the footer text bold */
         }
 
         .contact-info a {
@@ -98,7 +104,7 @@
         }
 
         .contact-info a:hover {
-            color: #555; /* Change color on hover for better interaction */
+            color: #ccc; /* Change color on hover for better interaction */
         }
     </style>
 </head>
