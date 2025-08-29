@@ -24,6 +24,7 @@
             display: flex; /* Use flexbox for layout */
             justify-content: space-between; /* Space out the name and tabs */
             align-items: center; /* Center vertically */
+            background-color: #b0b0b0; /* Darker grey for the header */
             padding: 20px; /* Add some padding for visual appeal */
             color: black; /* Text color for the header */
         }
@@ -61,9 +62,19 @@
             text-decoration: underline; /* Underline active tab for clarity */
         }
 
+        #content {
+            flex: 1; /* Allow content to fill available space */
+            display: flex; /* Display content area as a flexbox */
+            flex-direction: column; /* Stack sections vertically */
+        }
+
         .tab-content {
             display: none; /* Hide all content by default */
             flex: 1; /* Allow tab content to grow and fill available space */
+            padding: 20px; /* Padding inside the content area */
+            background-color: white; /* Background for the content area */
+            border-radius: 8px; /* Optional: rounded corners for content */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: subtle shadow effect */
         }
 
         .tab-content.active {
