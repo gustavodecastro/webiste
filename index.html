@@ -1,3 +1,10 @@
+To set the header and footer to 70% width and have them share the same background color, you can apply similar styling to the header and footer as was done with the content. Here’s how you can adjust your HTML and CSS to achieve this:
+
+### Updated HTML with Header and Footer Styling
+
+Here's the revised HTML with the required changes:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +34,8 @@
             background-color: #b0b0b0; /* Darker grey for the header */
             padding: 20px; /* Add some padding for visual appeal */
             color: black; /* Text color for the header */
+            width: 70%; /* Set width to 70% */
+            margin: 0 auto; /* Center the header */
         }
 
         .header-title {
@@ -91,6 +100,8 @@
             background-color: #b0b0b0; /* Darker grey for the footer */
             padding: 10px 20px; /* Add padding for visual appeal */
             color: black; /* Text color for the footer */
+            width: 70%; /* Set width to 70% */
+            margin: 0 auto; /* Center the footer */
         }
 
         .contact-info a {
@@ -199,3 +210,12 @@
     </script>
 </body>
 </html>
+```
+
+### Key Changes Made:
+
+1. **Header and Footer Width**: The `header` and `footer` elements are now set to `width: 70%;` and `margin: 0 auto;` to center them on the page.
+
+2. **Shared Background Color**: The background color of the `header` and `footer` is kept at `#b0b0b0`, ensuring consistency.
+
+3. **Main Content Area**: The main content area (`#content`) retains the width of `70%` to match the header and
