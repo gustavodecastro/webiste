@@ -141,11 +141,17 @@
         </section>
 
         <section id="CV" class="tab-content">
-            <h2>CV</h2>
-            <p>Your CV content will go here.</p>
+          <h2>CV</h2>
+          <!-- Fallback link (in case the PDF viewer isn’t supported) -->
+          <p>If the CV doesn’t load, <a href="CV.pdf" target="_blank" rel="noopener">click here to open it</a>.</p>
+          <iframe
+            src="CV.pdf"
+            title="Gustavo Amorim CV"
+            class="cv-frame"
+          ></iframe>
         </section>
     </div>
-
+    
     <footer>
         <div>Department of Biostatistics, Vanderbilt University Medical Center</div>
         <div class="contact-info">
