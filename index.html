@@ -28,7 +28,10 @@
             margin: 0 auto;
             background-color: #01101e; /* Darker grey for the header */
             padding: 20px; /* Add some padding for visual appeal */
+            font-weight: bold; /* Make the header text bold */
             color: white; /* Text color for the header */
+            border-radius: 8px; /* Optional: rounded corners for the header */
+            margin-bottom: 0; /* Ensure no space below the header */
         }
 
         .header-title {
@@ -57,7 +60,7 @@
         }
 
         button.tab:hover {
-            color: #555; /* Change color on hover for better interaction */
+            color: #ccc; /* Change color on hover for better interaction */
         }
 
         button.tab.active {
@@ -70,6 +73,7 @@
             flex-direction: column; /* Stack sections vertically */
             width: 70%; /* Set content width to 60% */
             margin: 0 auto; /* Center content */
+            padding-top: 0; /* Ensure no padding on top */
         }
 
         .tab-content {
@@ -115,8 +119,7 @@
             <ul>
                 <li><button class="tab" onclick="showTab('about')">Home</button></li>
                 <li><button class="tab" onclick="showTab('publications')">Publications</button></li>
-                <li><button class="tab" onclick="showTab('courses')">Courses</button></li>
-                <li><button class="tab" onclick="showTab('contact')">Contact</button></li>
+                <li><button class="tab" onclick="showTab('courses')">Teaching</button></li>
                 <li><button class="tab" onclick="showTab('CV')">CV</button></li>
             </ul>
         </nav>
@@ -153,11 +156,6 @@
             <ul>
                 <li><a href="link_to_publication_1">BIOS 6311</a> - Description</li>
             </ul>
-        </section>
-        
-        <section id="contact" class="tab-content">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:gustavo.g.amorim@vumc.org">gustavo.g.amorim@vumc.org</a></p>
         </section>
 
         <section id="CV" class="tab-content">
