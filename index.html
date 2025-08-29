@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustavo Amorim - Personal website</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline CSS for demonstration; ideally you'd keep this in styles.css */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        button.tab {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        button.tab.active {
+            background-color: #45a049;
+        }
+
+        .tab-content {
+            display: none; /* Hide all content by default */
+        }
+
+        .tab-content.active {
+            display: block; /* Show active content */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,56 +53,77 @@
         <p>Assistant Professor</p>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#CV">Contact</a></li>
+                <li><button class="tab" onclick="showTab('about')">About</button></li>
+                <li><button class="tab" onclick="showTab('publications')">Publications</button></li>
+                <li><button class="tab" onclick="showTab('courses')">Courses</button></li>
+                <li><button class="tab" onclick="showTab('contact')">Contact</button></li>
+                <li><button class="tab" onclick="showTab('CV')">CV</button></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I work on statistical missing data, two-phase designs, and semiparametric regression. I also work on Global Health, focusing on Tuberculosis and HIV.</p>
-    </section>
+    <div id="content">
+        <section id="about" class="tab-content active">
+            <h2>About Me</h2>
+            <p>I work on statistical missing data, two-phase designs, and semiparametric regression. I also work on Global Health, focusing on Tuberculosis and HIV.</p>
+        </section>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><a href="link_to_publication_1">Title of Publication 1</a> - Description</li>
-            <li><a href="link_to_publication_2">Title of Publication 2</a> - Description</li>
-            <li><a href="link_to_publication_3">Title of Publication 3</a> - Description</li>
-            <!-- Add more publications as needed -->
-        </ul>
-    </section>
+        <section id="publications" class="tab-content">
+            <h2>Publications</h2>
+            <ul>
+                <li><a href="link_to_publication_1">Title of Publication 1</a> - Description</li>
+                <li><a href="link_to_publication_2">Title of Publication 2</a> - Description</li>
+                <li><a href="link_to_publication_3">Title of Publication 3</a> - Description</li>
+                <!-- Add more publications as needed -->
+            </ul>
+        </section>
 
-    <section id="courses">
-        <h2>Courses</h2>
-        <ul>
-            <li><a href="link_to_publication_1">BIOS 6311</a> - Description</li>
-        </ul>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:gustavo.g.amorim at vumc.org">gustavo.g.amorim at vumc.org</a></p>
-    </section>
+        <section id="courses" class="tab-content">
+            <h2>Courses</h2>
+            <ul>
+                <li><a href="link_to_publication_1">BIOS 6311</a> - Description</li>
+            </ul>
+        </section>
+        
+        <section id="contact" class="tab-content">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:gustavo.g.amorim@vumc.org">gustavo.g.amorim@vumc.org</a></p>
+        </section>
 
-    <section id="CV">
-        <h2>CV</h2>
-    </section>
+        <section id="CV" class="tab-content">
+            <h2>CV</h2>
+            <p>Your CV content will go here.</p>
+        </section>
+    </div>
 
     <footer>
-        <p>© [Year] Gustavo Amorim. All rights reserved.</p>
+        <p>© <span id="year"></span> Gustavo Amorim. All rights reserved.</p>
     </footer>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const yearSpan = document.createElement("span");
-        yearSpan.textContent = new Date().getFullYear();
-        document.querySelector("footer p").innerHTML = `© ${yearSpan.textContent} Your Name. All rights reserved.`;
-    });
+        // Function to show the relevant tab content
+        function showTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+
+            // Update active tab styling
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+
+        // Set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Show the 'About' tab by default
+        showTab('about');
     </script>
 </body>
 </html>
