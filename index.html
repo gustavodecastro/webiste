@@ -55,26 +55,16 @@
     margin: 0;
   }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-    
   body {
     font-family: Calibri, sans-serif;
     background-color: #e0e0e0;
     display: flex;               /* flex on body only */
     flex-direction: column;      /* stack vertically */
-    align-items: stretch;       /* stretch children to full available width */
-    padding-left: 2in;          /* fixed left margin */
-    padding-right: 2in;         /* fixed right margin */
+    align-items: center;         /* center children horizontally */
   }
 
   header, #content, footer {
-    width: 100%;
-    margin: 0;                  /* no auto centering */
-    max-width: 100%;
+    width: 70%;                  /* unified width */
   }
 
   header {
@@ -86,6 +76,7 @@
     font-weight: bold;
     color: white;
     border-radius: 8px;
+    margin: 0;                   /* no auto margins needed */
   }
 
   .header-title { margin: 0; }
@@ -110,13 +101,12 @@
     display: flex;
     flex-direction: column;
     padding-top: 0;
+    margin: 0;                   /* no auto margins */
   }
 
   .tab-content {
     display: none;
     flex: 1;
-    width: 100%;
-    margin: 0;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
@@ -142,40 +132,17 @@
     color: white;
     font-weight: bold;
     border-radius: 8px;
-    margin-top: 20px;
-    overflow: hidden;
+    margin: 20px 0 0;           /* simple top margin, no auto centering */
   }
 
-    footer > div:first-child {
-      flex: 1 1 auto;
-      min-width: 0;          /* allow wrapping instead of expanding */
-      word-break: break-word;
-    }
-    
-    /* Icons block stays compact on the right */
-    footer .contact-info {
-      display: flex;
-      gap: 10px;
-      flex: 0 0 auto;        /* don't let it stretch */
-    }
-
-    
   .contact-info a {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
   }
-    
   .contact-info a + a { margin-left: 10px; }
   .contact-info i { font-size: 1.2em; line-height: 1; vertical-align: middle; }
   .contact-info a:hover { color: #ccc; }
-
-    @media (max-width: 1200px) {
-      body {
-        padding-left: 5vw;
-        padding-right: 5vw;
-      }
-    }
 </style>
 
     
