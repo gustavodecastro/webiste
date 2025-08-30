@@ -55,6 +55,12 @@
     margin: 0;
   }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+    
   body {
     font-family: Calibri, sans-serif;
     background-color: #e0e0e0;
@@ -68,6 +74,7 @@
   header, #content, footer {
     width: 100%;
     margin: 0;                  /* no auto centering */
+    max-width: 100%;
   }
 
   header {
@@ -136,8 +143,23 @@
     font-weight: bold;
     border-radius: 8px;
     margin-top: 20px;
+    overflow: hidden;
   }
 
+    footer > div:first-child {
+      flex: 1 1 auto;
+      min-width: 0;          /* allow wrapping instead of expanding */
+      word-break: break-word;
+    }
+    
+    /* Icons block stays compact on the right */
+    footer .contact-info {
+      display: flex;
+      gap: 10px;
+      flex: 0 0 auto;        /* don't let it stretch */
+    }
+
+    
   .contact-info a {
     color: white;
     text-decoration: none;
