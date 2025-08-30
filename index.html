@@ -60,11 +60,14 @@
     background-color: #e0e0e0;
     display: flex;               /* flex on body only */
     flex-direction: column;      /* stack vertically */
-    align-items: center;         /* center children horizontally */
+    align-items: stretch;       /* stretch children to full available width */
+    padding-left: 2in;          /* fixed left margin */
+    padding-right: 2in;         /* fixed right margin */
   }
 
   header, #content, footer {
-    width: 70%;                  /* unified width */
+    width: 100%;
+    margin: 0;                  /* no auto centering */
   }
 
   header {
@@ -76,7 +79,6 @@
     font-weight: bold;
     color: white;
     border-radius: 8px;
-    margin: 0;                   /* no auto margins needed */
   }
 
   .header-title { margin: 0; }
@@ -101,12 +103,13 @@
     display: flex;
     flex-direction: column;
     padding-top: 0;
-    margin: 0;                   /* no auto margins */
   }
 
   .tab-content {
     display: none;
     flex: 1;
+    width: 100%;
+    margin: 0;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
@@ -132,7 +135,7 @@
     color: white;
     font-weight: bold;
     border-radius: 8px;
-    margin: 20px 0 0;           /* simple top margin, no auto centering */
+    margin: 20px;
   }
 
   .contact-info a {
@@ -140,9 +143,17 @@
     text-decoration: none;
     font-size: 1.2em;
   }
+    
   .contact-info a + a { margin-left: 10px; }
   .contact-info i { font-size: 1.2em; line-height: 1; vertical-align: middle; }
   .contact-info a:hover { color: #ccc; }
+
+    @media (max-width: 1200px) {
+      body {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+    }
 </style>
 
     
