@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Amorim - Personal website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <title>Gustavo Amorim — Assistant Professor of Biostatistics</title>
     <meta name="description" content="Gustavo Amorim is an Assistant Professor of Biostatistics at Vanderbilt University Medical Center. Research in missing data, two-phase designs, measurement error, and semiparametric regression.">
-    <link rel="canonical" href="https://gustavodecastro.github.io/website/" />
-
-    <!-- Open Graph (for link previews) -->
+    <link rel="canonical" href="gustavodecastro.github.io/website" />
+    
     <meta property="og:title" content="Gustavo Amorim — Assistant Professor of Biostatistics">
     <meta property="og:description" content="Research in missing data, two-phase designs, measurement error, and semiparametric regression.">
     <meta property="og:url" content="https://gustavodecastro.github.io/website/">
     <meta property="og:type" content="website">
-    <!-- Optional image: add one if you have it (place file in /images/profile.jpg) -->
-    <!-- <meta property="og:image" content="https://gustavodecastro.github.io/website/images/profile.jpg"> -->
-
-    <!-- Twitter Card -->
+    
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Gustavo Amorim — Assistant Professor of Biostatistics">
     <meta name="twitter:description" content="Research in missing data, two-phase designs, measurement error, and semiparametric regression.">
-    <!-- <meta name="twitter:image" content="https://gustavodecastro.github.io/website/images/profile.jpg"> -->
 
-    <!-- Structured data: Schema.org Person -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -49,9 +46,102 @@
       ]
     }
     </script>
+    
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  body {
+    font-family: Calibri, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;               /* flex on body only */
+    flex-direction: column;      /* stack vertically */
+    align-items: center;         /* center children horizontally */
+  }
+
+  header, #content, footer {
+    width: 70%;                  /* unified width */
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #01101e;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    margin: 0;                   /* no auto margins needed */
+  }
+
+  .header-title { margin: 0; }
+
+  nav ul { list-style: none; padding: 0; margin: 0; }
+  nav ul li { display: inline; margin-left: 10px; }
+
+  button.tab {
+    background: none;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  button.tab:hover { color: #ccc; }
+  button.tab.active { text-decoration: underline; }
+
+  #content {
+    flex: 1;                     /* fill space between header and footer */
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    margin: 0;                   /* no auto margins */
+  }
+
+  .tab-content {
+    display: none;
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .tab-content.active { display: block; }
+
+.cv-frame {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  min-height: 0; /* prevents overflow in some browsers */
+}
+    
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #01101e;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 20px 0 0;           /* simple top margin, no auto centering */
+  }
+
+  .contact-info a {
+    color: white;
+    text-decoration: none;
+  }
+  .contact-info a + a { margin-left: 10px; }
+  .contact-info a:hover { color: #ccc; }
+</style>
+
+    
 </head>
 <body>
     <header>
@@ -88,6 +178,7 @@
                 <li><a href="link_to_publication_1">Title of Publication 1</a> - Description</li>
                 <li><a href="link_to_publication_2">Title of Publication 2</a> - Description</li>
                 <li><a href="link_to_publication_3">Title of Publication 3</a> - Description</li>
+                <!-- Add more publications as needed -->
             </ul>
         </section>
 
@@ -99,38 +190,50 @@
         </section>
 
         <section id="CV" class="tab-content">
-            <!-- For full-height CV panel, ensure CSS from styles.css as previously provided -->
-            <iframe
-              src="CV.pdf"
-              title="Gustavo Amorim CV"
-              class="cv-frame"
-            ></iframe>
+          <iframe
+            src="gustavo_cv_082025.pdf"
+            title="Gustavo Amorim CV"
+            class="cv-frame"
+          ></iframe>
+          <!-- Optional fallback link (only shows if you add it elsewhere) -->
+          <!-- <a href="CV.pdf" target="_blank" rel="noopener">Open CV</a> -->
         </section>
+        
     </div>
-
+    
     <footer>
         <div>Department of Biostatistics, Vanderbilt University Medical Center</div>
         <div class="contact-info">
             <a href="mailto:gustavo.g.amorim@vumc.org"><span>✉️</span></a>
-            <a href="https://github.com/gustavodecastro" target="_blank" rel="noopener">
+            <a href="https://github.com/gustavodecastro" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
         </div>
     </footer>
 
     <script>
-        // Tabs
+        // Function to show the relevant tab content
         function showTab(tabId) {
+            // Hide all tab contents
             const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+            // Show the selected tab content
             document.getElementById(tabId).classList.add('active');
 
+            // Update active tab styling
             const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => tab.classList.remove('active'));
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
             document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
         }
 
-        // Default tab
+        // Set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Show the 'About' tab by default
         showTab('about');
     </script>
 </body>
